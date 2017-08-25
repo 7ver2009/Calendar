@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ru">
+	<head>
+	  <meta http-equiv="Content-Type" content="text/html;charset=utf-8">
+	  <title>Макет</title>
+	  <meta http-equiv="X-UA-Compatible" content="IE=edge">	  
+	  <link href="css/style.css" type="text/css" rel="stylesheet">	  	  
+  </head>
+
+	<body>
+		<div class="wrapper">
+			<div class="header">
+				<div class="header-interface">
+					<button class="header-interface__add">Добавить</button>
+
+					<div class="quickCommentaryPopup   hide">
+						<div class="quickCommentaryPopup-wrapper">
+							<button class="quickClose"></button>
+							<input type="text" placeholder="5 марта, 14:00, День рождения" maxlength="30"></input>
+							<button class="quickSubmit">Создать</button>
+							<span class="errorQuickPopup"></span>
+						</div>			
+					</div>
+
+					<button class="header-interface__refresh">Обновить</button>
+					<form> 
+						<input type="search" name="search" placeholder="Событие, дата, или участник" maxlength="30">
+					</form>
+				</div>
+			</div>
+
+			<div class="main">
+				<div class="main-interface">
+					<button class="main-interface__previous"></button>
+					<span class="main-interface__date">Март 2013</span>
+					<button class="main-interface__next"></button>
+					<button class="main-interface__now">Сегодня</button>
+				</div>
+				<div class="calendarTable">
+				</div>
+			</div>
+		</div>
+	</div>
+
+		<div class="commentPopup   hide">
+			<div class="commentPopup-wrapper">				
+				<button class="closeButton"></button>
+				<div class="commentTitle">
+					<form>
+						<input type="text" placeholder="Заголовок" maxlength="20">
+					</form>
+					<p class="hide"></p>
+				</div>
+				<div class="commentDate">
+					<form>
+						<input type="text" placeholder="Дата мероприятия" maxlength="20">
+					</form>
+					<p class="hide"></p>
+				</div>
+				<div class="commentPeople">
+					<form>
+						<input type="text" placeholder="Имена участников" maxlength="20">
+					</form>
+					<p class="hide"></p>
+				</div>
+				<div class="commentDescription">
+					<textarea placeholder="Описание" maxlength="80">
+					</textarea>
+					<p class="hide"></p>
+				</div>
+				<button class="commentSubmit">Готово</button>
+				<button class="commentRemove">Удалить</button>					
+			</div>
+
+		<script type="text/javascript" src="js/quickcomment.js"></script>
+		<script type="text/javascript" src="js/popupcomment.js"></script>
+		<script type="text/javascript" src="js/calendar.js"></script>
+	  <script type="text/javascript" src="js/style.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,372 @@
+@font-face {
+			font-family: "MyriadProRegular";
+			src: url("../fonts/MyriadProRegular.eot");
+			src: url("../fonts/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+			url("../fonts/MyriadProRegular.woff") format("woff"),
+			url("../fonts/MyriadProRegular.ttf") format("truetype");
+			font-style: normal;
+			font-weight: normal;
+}
+
+body{
+	font-family: MyriadProRegular, Arial, sans-serif;
+}
+
+b{
+	display: none;
+}
+
+.wrapper{
+	width: 1000px;
+	padding-left: 50px;
+	padding-right: 50px;
+	margin: 0 auto;	
+}
+
+.header{
+	display: flex;
+	height: 101px;	
+}
+
+.header-interface{
+	position: relative;
+	display: flex;
+	align-self: flex-end;
+	justify-content: flex-end;
+	width: 100%;
+}
+
+.header-interface__add,
+.header-interface__refresh{
+	cursor: pointer;
+	height: 26px;
+	width: 80px;
+	background: #0271c7;
+	border-radius: 2px;
+	box-shadow: 0 0 1px rgba(0,0,0,0.3);
+	color: #fff;
+	font-size: 14px;
+}
+
+.header-interface__refresh{
+	margin-left: 10px;
+}
+
+.header-interface form{
+	position: relative;
+	margin-left: auto; 
+	margin-right: 99px;
+}
+
+.header-interface form::before{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 16px;
+	width: 14px;
+	background: url(../images/sprite/sprites.png) no-repeat -10px -42px;		
+	top: 3px;
+	left: -20px;
+}
+
+.header-interface form input{
+	width: 200px;
+	height: 23px;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 2px;	
+	padding-left: 7px;
+}
+
+.main{
+	background: url(../images/line.png) repeat-x;
+	margin-top: 17px;
+}
+
+.main-interface{
+	display: flex;	
+	align-items: center;
+	height: 42px;
+	margin-top: 24px;
+}
+
+.main-interface__previous,
+.main-interface__next{
+	position: relative;
+	cursor: pointer;
+	width: 17px;
+	height: 17px;
+	border-radius: 2px;
+	border: 1px solid rgba(0,0,0,0.3);
+	background: none;
+	margin-right: 5px;
+}
+
+.main-interface__previous::before{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 5px;
+	width: 3px;
+	background: url(../images/sprite/sprites.png) no-repeat -51px -37px;
+	top: 5px;
+	left: 7px;
+}
+
+.main-interface__next{
+	margin-left: 5px;
+}
+
+.main-interface__next::before{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 5px;
+	width: 3px;
+	background: url(../images/sprite/sprites.png) no-repeat -78px -10px;
+	top: 5px;
+	left: 7px;
+}
+
+.main-interface__date{
+	font-size: 17px;	
+	margin-right: 5px;
+}
+
+.main-interface__now{
+	cursor: pointer;
+	width: 57px;
+	height: 17px;
+	font-size: 10px;	
+	color: #666666;
+	background: none;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 2px;
+	padding: 0;
+}
+
+table {
+  border-collapse: collapse;
+  border: 1px solid #ebebeb;  
+	font-size: 14px;
+	color: #999999;	
+}
+
+.calendarTable{
+	margin-top: 20px;
+}
+
+.calendarTable table th,
+.calendarTable table td{	
+	width: 111px;
+	height: 101px;	
+	vertical-align: top;
+	text-align: left;
+	padding: 8px;
+}
+
+.calendarTable table th:hover,
+.calendarTable table td:hover{
+	background: #deecf5;
+}
+
+.commentPopup{
+	position: absolute;
+	width: 302px;	
+	max-height: 500px;
+	border: 1px solid #cccccc;
+	box-shadow: -2px 2px 10px rgba(0,0,0,0.5);
+	top: 20px;
+	left: 20px;
+	background: white;
+}
+
+.commentPopup-wrapper{
+	position: relative;
+	padding-top: 25px;
+	padding-left: 20px;
+	padding-right: 20px;
+	padding-bottom: 25px;
+}
+
+.closeButton{
+	cursor: pointer;
+	position: absolute;
+	background: none;
+	border: none;
+	width: 20px;
+	height: 20px;	
+	right: 1px;
+	top: 1px;
+}
+
+.closeButton::before{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 7px;
+	width: 7px;
+	background: url(../images/sprite/sprites.png) no-repeat -51px -10px;
+	top: 6px;
+	left: 6px;
+}
+
+.commentTitle,
+.commentDate,
+.commentDescription{
+	margin-bottom: 20px;
+}
+
+.commentPeople{
+	margin-bottom: 30px;	
+}
+
+.commentTitle p,
+.commentDate p,
+.commentPeople p{
+	margin-top: 1px;
+	margin-bottom: 1px;
+	padding-left: 7px;
+}
+
+.commentTitle p{
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.commentDate p{
+	font-size: 12px;
+}
+
+.commentPeople p
+.commentDescription p{
+	font-size: 16px;
+}
+
+.commentTitle form input,
+.commentDate form input,
+.commentPeople form input,
+.commentDescription textarea{
+	width: 248px;	
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 2px;	
+	padding-left: 7px;
+}
+
+.commentTitle form input,
+.commentDate form input,
+.commentPeople form input{
+	height: 23px;
+}
+
+.commentDescription textarea{
+	height: 105px;
+	resize: none;
+}
+
+.commentSubmit{
+	cursor: pointer;
+	width: 58px;
+	height: 23px;	
+	font-size: 12px;
+	border: 1px solid #9c9c9c;
+	border-radius: 4px;	
+}
+
+.commentRemove{
+	cursor: pointer;
+	width: 65px;
+	height: 23px;
+	font-size: 12px;
+	margin-left: 12px;
+	border: 1px solid #9c9c9c;
+	border-radius: 4px;
+}
+
+.discribed{
+	background: #c2e4fe;
+}
+
+.selectedCalendarBlock{
+	width: 107px;
+	height: 97px;		
+	border: 2px solid #86c9fd;
+	background: #e5f1f9;
+}
+
+.quickCommentaryPopup{
+	position: absolute;
+	width: 262px;
+	height: 55px;	
+	border: 1px solid #cccccc;
+	box-shadow: -2px 2px 10px rgba(0,0,0,0.5);
+	background: white;
+	top: 39px;
+	left: 1px;
+	padding: 24px 21px;
+	z-index: 100;
+}
+
+.quickCommentaryPopup::before{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 12px;
+	width: 21px;
+	background: url(../images/sprite/sprites.png) no-repeat -10px -10px;
+	top: -12px;
+	left: 25px;
+}
+
+.quickCommentaryPopup-wrapper{
+	position: relative;
+	height: 100%;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: column;
+}
+
+.quickClose{	
+	cursor: pointer;
+	position: absolute;
+	background: white;
+	border: none;
+	width: 20px;
+	height: 20px;	
+	right: -18px;
+	top: -21px;
+}
+
+.quickClose::before{
+	content: "";
+	display: block;
+	position: absolute;
+	height: 7px;
+	width: 7px;
+	background: url(../images/sprite/sprites.png) no-repeat -51px -10px;
+	top: 6px;
+	left: 6px;
+}
+
+.quickSubmit{
+	display: block;
+	width: 58px;
+	height: 19px;
+	background: none;
+	border: 1px solid rgba(0,0,0,0.3);
+	border-radius: 4px;
+	font-size: 12px;
+	line-height: 12px;
+	padding-left: 6px;
+}
+
+.errorQuickPopup{
+	position: absolute;
+	font-size: 14px;
+	color: #b70f17;
+	bottom: -18px;
+	left: 72px;
+}
+
+.hide{
+	display: none;
+}
